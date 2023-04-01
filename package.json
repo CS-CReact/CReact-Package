@@ -1,0 +1,29 @@
+{
+  "name": "creact-package",
+  "version": "1.0.0",
+  "description": "CReact NPM Package",
+  "main": "build/bundle.js",
+  "types": "build/bundle.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS-CReact/CReact-Package.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CS-CReact/CReact-Package/issues"
+  },
+  "homepage": "https://github.com/CS-CReact/CReact-Package#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.3",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
