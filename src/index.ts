@@ -1,3 +1,8 @@
+// import cRender from '../src/lib/crender';
 import sayHello from './sayHello';
 
-export default sayHello;
+const test = () => {
+  return 'ASDF';
+};
+
+export { test, sayHello };
