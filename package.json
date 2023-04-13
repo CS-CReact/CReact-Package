@@ -2,10 +2,10 @@
   "name": "creact-package",
   "version": "1.0.0",
   "description": "CReact NPM Package",
-  "main": "build/bundle.js",
-  "types": "build/bundle.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "build": "webpack",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -29,5 +29,6 @@
     "typescript": "^5.0.3",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1"
-  }
+  },
+  "files": ["build/**/*"]
 }

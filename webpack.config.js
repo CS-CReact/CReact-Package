@@ -21,4 +21,15 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   mode: 'production',
+  // optimization: {
+  //   minimize: true,
+  //   minimizer: [
+  //     new TerserPlugin({
+  //       terserOptions: {
+  //         keep_classnames: true,
+  //         keep_fnames: true,
+  //       },
+  //     }),
+  //   ],
+  // },
 };
