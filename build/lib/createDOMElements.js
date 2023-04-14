@@ -1,3 +1,6 @@
+import getLaneNum from './getLaneNum';
+import hasTransition from './hasTransition';
+import setTransitionColor from './setTransitionColor';
 import hasSuspense from './hasSuspense';
 var createDOMElements = function (type, props, internalInstanceHandle) {
     var className = props.className, id = props.id, style = props.style, onClick = props.onClick, onChange = props.onChange, placeholder = props.placeholder;
@@ -32,6 +35,11 @@ var createDOMElements = function (type, props, internalInstanceHandle) {
         tooltip.innerHTML = '&#128570 Phew! It took me 1223ms to load!';
         tooltip.className = 'SuspensePopup';
         element.appendChild(tooltip);
+    }
+    var laneNum = getLaneNum(internalInstanceHandle);
+    if (hasTransition(laneNum)) {
+        element.style.backgroundColor = setTransitionColor(laneNum);
+        element.classList.add('TransitionLane' + (laneNum - 6));
     }
     return element;
 };
